@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Loja — ADC Sanguedo</title>
+<meta name="description" content="Loja oficial da ADC Sanguedo. Encomenda a tua camisola preta e branca." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="loja">
+<header data-site-nav></header>
+<main>
+  <header class="pagehead">
+    <div class="bar stripes"></div>
+    <div class="wrap"><h1>Loja</h1><p>Veste as cores. As encomendas seguem por WhatsApp ou e-mail para a direção — sem pagamentos online por agora.</p></div>
+  </header>
+  <section class="section">
+    <div class="wrap"><div class="shop__grid" id="shopGrid"></div></div>
+  </section>
+</main>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart" id="cart" aria-label="Carrinho de encomendas">
+  <div class="cart__head"><h3>A tua encomenda</h3><button id="cartClose" aria-label="Fechar">✕</button></div>
+  <div class="cart__items" id="cartItems"></div>
+  <div class="cart__foot">
+    <div class="cart__total"><span>Total</span><b id="cartTotal">0,00 €</b></div>
+    <a class="btn btn--solid" id="checkoutWa">Finalizar por WhatsApp</a>
+    <a class="btn btn--ghost" id="checkoutMail">Finalizar por e-mail</a>
+    <p class="cart__note">Valores indicativos. A direção confirma disponibilidade e pagamento.</p>
+  </div>
+</aside>
+<footer data-site-footer></footer>
+<script src="js/config.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/pages.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alugueres de Campo (Fut 7) — ADC Sanguedo</title>
+<meta name="description" content="Aluga o campo de Futebol de 7 da ADC Sanguedo. Marca o teu horário." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="alugueres">
+<header data-site-nav></header>
+<main>
+  <header class="pagehead">
+    <div class="bar stripes"></div>
+    <div class="wrap"><h1>Alugueres de campo</h1><p id="alugIntro">O campo de Futebol de 7 do clube está disponível para aluguer.</p></div>
+  </header>
+  <section class="section">
+    <div class="wrap">
+      <div class="alug">
+        <div>
+          <div class="alug__price">
+            <div class="sub">Preço</div>
+            <div class="big" id="alugPreco">—</div>
+            <div class="sub" id="alugHorario">—</div>
+          </div>
+          <p class="eyebrow">Condições</p>
+          <ul id="alugCond"></ul>
+        </div>
+        <div>
+          <p class="eyebrow">Pedir reserva</p>
+          <h2 class="section-title" style="font-size:clamp(28px,4vw,40px)">Marca o teu jogo</h2>
+          <div class="form" style="margin-top:24px">
+            <input type="text" id="aHp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
+            <div class="field"><label for="aNome">Nome</label><input id="aNome" maxlength="80" placeholder="O teu nome" /></div>
+            <div class="field"><label for="aTel">Contacto</label><input id="aTel" maxlength="40" placeholder="Telemóvel ou e-mail" /></div>
+            <div class="row2">
+              <div class="field"><label for="aData">Data</label><input type="date" id="aData" /></div>
+              <div class="field"><label for="aHora">Hora</label><input type="time" id="aHora" /></div>
+            </div>
+            <div style="display:flex;flex-wrap:wrap;gap:12px">
+              <button class="btn btn--solid" id="alugWa">Pedir por WhatsApp</button>
+              <button class="btn btn--ghost" id="alugMail">Pedir por e-mail</button>
+            </div>
+            <p class="cart__note" style="text-align:left">O pedido é confirmado pela direção consoante a disponibilidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer data-site-footer></footer>
+<script src="js/config.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/pages.js" defer></script>
+</body>
+</html>
