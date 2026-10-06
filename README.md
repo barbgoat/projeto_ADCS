@@ -1,4 +1,4 @@
-# ADC Sanguedo — Site do Clube
+# Site do ADC Sanguedo
 
 Site oficial da **Associação Desportiva e Cultural de Sanguedo**. Multi-página, estático.
 
@@ -24,34 +24,37 @@ python3 -m http.server 8000
 adc-sanguedo/
 ├── *.html               ← as 6 páginas (só a estrutura de cada uma)
 ├── css/style.css         ← todo o visual
+├── fonts/                ← fonte dos títulos (Oswald) + licença OFL
+├── img/                  ← IMAGENS: emblema/, patrocinadores/, produtos/, fotos/ (ver img/README.md)
 ├── js/
 │   ├── config.js         ← DADOS EDITÁVEIS (tudo o que mudas está aqui)
 │   ├── site.js           ← MENU + RODAPÉ partilhados (editas num só sítio)
 │   └── pages.js          ← lógica de cada página
+├── favicon.svg           ← ícone do separador do navegador
 ├── _headers              ← cabeçalhos de segurança (Netlify / Cloudflare Pages)
 ├── .well-known/security.txt
-├── SECURITY.md           ← postura de segurança
-└── dist/index.html       ← versão combinada num ficheiro (só para a pré-visualização)
+└── SECURITY.md           ← postura de segurança
 ```
 
 ## O que editas
-- **`js/config.js`** — clube, redes, **patrocínios**, **estrutura** (formação/séniores/veteranos),
+- **`js/config.js`**: clube, redes, **patrocínios**, **estrutura** (formação/séniores/veteranos),
   **alugueres**, produtos da loja, jogos.
-- **Menu e rodapé** — em `js/site.js` (uma vez, aplica-se a todas as páginas).
-- **Textos longos** (Sobre nós, etc.) — diretamente no HTML da página.
-- **Cores** — nos tokens no topo do `css/style.css`.
-- **Emblema** — a constante `CREST` no topo do `js/site.js` (troca pelo oficial).
+- **Menu e rodapé**: em `js/site.js` (uma vez, aplica-se a todas as páginas).
+- **Textos longos** (Sobre nós, etc.): diretamente no HTML da página.
+- **Cores**: nos tokens no topo do `css/style.css`.
+- **Emblema**: a função `crest()` no topo do `js/site.js` (troca pelo oficial) e o `favicon.svg`.
+- **Jogos**: os que já passaram desaparecem sozinhos, só tens de acrescentar os novos.
+
+> **Depois de mudares o CSS ou os JS**, sobe o número `?v=2` → `?v=3` nas 6 páginas HTML
+> (ex.: `css/style.css?v=3`). Assim os navegadores dos visitantes vão buscar a versão nova
+> em vez de mostrarem a antiga guardada em cache.
 
 > O menu e o rodapé são **injetados por JavaScript** para não teres de os repetir em 6
-> ficheiros. Se um dia quiseres funcionar sem JS, passam-se para HTML em cada página.
+> ficheiros. Sem JS aparece um menu simples de recurso (`<noscript>` em cada página).
 
 ## Segurança
-Ver `SECURITY.md`. Para os cabeçalhos HTTP completos (HSTS, anti-clickjacking), aloja em
-**Netlify** ou **Cloudflare Pages** — o GitHub Pages não permite cabeçalhos.
-
-## Sobre a pasta `dist/`
-A pré-visualização só aloja um ficheiro, por isso `dist/index.html` junta as páginas num só
-(navegação por `#`). **Não edites o `dist/` à mão.** Em alojamento real usa a estrutura normal.
+Ver `SECURITY.md`. O site é para alojar em **Netlify** ou **Cloudflare Pages**, que leem o
+`_headers` (HSTS, anti-clickjacking). Se mudares a CSP, muda-a na `<meta>` das 6 páginas **e** no `_headers`.
 
 ## Próximas ideias
 Notícias/blog (como 7.ª página) · plantel · área de sócios · loja com pagamento online.

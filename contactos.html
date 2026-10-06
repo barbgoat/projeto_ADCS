@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Contactos — ADC Sanguedo</title>
+<title>Contactos | ADC Sanguedo</title>
 <meta name="description" content="Contactos da Associação Desportiva e Cultural de Sanguedo." />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preload" href="fonts/oswald-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="css/style.css?v=11" />
 </head>
 <body data-page="contactos">
 <header data-site-nav></header>
+<noscript><nav class="nav-nojs" aria-label="Principal"><a href="index.html">Início</a><a href="sobre.html">Sobre nós</a><a href="estrutura.html">Estrutura</a><a href="socios.html">Sócios</a><a href="loja.html">Loja</a><a href="alugueres.html">Alugueres</a><a href="contactos.html">Contactos</a></nav></noscript>
 <main>
-  <header class="pagehead">
+  <header class="pagehead on-dark">
     <div class="bar stripes"></div>
-    <div class="wrap"><h1>Contactos</h1><p>Fala connosco — estamos aqui para ajudar.</p></div>
+    <div class="wrap"><h1>Contactos</h1><p>Fala connosco, estamos aqui para ajudar.</p></div>
   </header>
   <section class="section">
     <div class="wrap contact__grid">
@@ -26,20 +26,22 @@
         <div class="socials" id="socials"></div>
       </div>
       <div>
-        <div class="form">
-          <input type="text" id="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" />
-          <div class="field"><label for="cn">Nome</label><input id="cn" maxlength="80" autocomplete="name" placeholder="O teu nome" /></div>
-          <div class="field"><label for="ce">E-mail</label><input id="ce" type="email" maxlength="120" autocomplete="email" placeholder="email@exemplo.pt" /></div>
-          <div class="field"><label for="cm">Mensagem</label><textarea id="cm" rows="5" maxlength="1500" placeholder="Como podemos ajudar?"></textarea></div>
-          <button class="btn btn--solid" id="sendMsg">Enviar mensagem</button>
-        </div>
+        <form class="form" id="contactForm">
+          <div class="field"><label for="cn">Nome</label><input id="cn" maxlength="80" autocomplete="name" placeholder="O teu nome" required /></div>
+          <div class="field"><label for="cm">Mensagem</label><textarea id="cm" rows="5" maxlength="1500" placeholder="Como podemos ajudar?" required></textarea></div>
+          <div class="form__btns">
+            <button type="submit" class="btn btn--solid" value="email">Enviar por e-mail</button>
+            <button type="submit" class="btn btn--ghost" value="whatsapp">Enviar por WhatsApp</button>
+          </div>
+          <p class="form__msg" id="contactMsg" role="status" hidden></p>
+        </form>
       </div>
     </div>
   </section>
 </main>
 <footer data-site-footer></footer>
-<script src="js/config.js" defer></script>
-<script src="js/site.js" defer></script>
-<script src="js/pages.js" defer></script>
+<script src="js/config.js?v=11" defer></script>
+<script src="js/site.js?v=11" defer></script>
+<script src="js/pages.js?v=11" defer></script>
 </body>
 </html>

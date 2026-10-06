@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sócios | ADC Sanguedo</title>
+<meta name="description" content="Renova a tua quota de sócio da ADC Sanguedo ou inscreve-te como novo sócio." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preload" href="fonts/oswald-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="css/style.css?v=11" />
+</head>
+<body data-page="socios">
+<header data-site-nav></header>
+<noscript><nav class="nav-nojs" aria-label="Principal"><a href="index.html">Início</a><a href="sobre.html">Sobre nós</a><a href="estrutura.html">Estrutura</a><a href="socios.html">Sócios</a><a href="loja.html">Loja</a><a href="alugueres.html">Alugueres</a><a href="contactos.html">Contactos</a></nav></noscript>
+<main>
+  <header class="pagehead on-dark">
+    <div class="bar stripes"></div>
+    <div class="wrap"><h1>Sócios</h1><p id="sociosIntro">Ser sócio é a forma mais direta de apoiar o clube.</p></div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Época <span id="sociosEpoca"></span></p>
+      <h2 class="section-title section-title--sm">Valores da quota</h2>
+      <div class="quota-grid" id="quotas"></div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap socios">
+      <div>
+        <p class="eyebrow">Como renovar</p>
+        <h2 class="section-title section-title--sm">Em três passos</h2>
+        <ol class="passos">
+          <li><b>Faz o pedido</b><span>Preenche o formulário com o teu número de sócio e envia por WhatsApp ou e-mail.</span></li>
+          <li><b>Paga a quota</b><span>Usa um dos meios de pagamento abaixo e indica o teu número de sócio na descrição.</span></li>
+          <li><b>Recebe a confirmação</b><span>A direção confirma o pagamento e atualiza a tua quota.</span></li>
+        </ol>
+        <p class="eyebrow">Pagamento</p>
+        <div class="pagamentos" id="pagamentos"></div>
+      </div>
+      <div>
+        <p class="eyebrow">Pedido</p>
+        <h2 class="section-title section-title--sm" id="socioTitulo">Renovar quota</h2>
+        <form class="form form--gap" id="socioForm">
+          <div class="field"><label for="sTipo">Pedido</label>
+            <select id="sTipo"><option value="renovar">Renovar quota</option><option value="novo">Quero ser sócio</option></select></div>
+          <div class="row2">
+            <div class="field" id="sNumCampo"><label for="sNum">Nº de sócio</label><input id="sNum" inputmode="numeric" maxlength="8" required /></div>
+            <div class="field"><label for="sQuota">Quota</label><select id="sQuota"></select></div>
+          </div>
+          <div class="field"><label for="sNome">Nome completo</label><input id="sNome" maxlength="100" autocomplete="name" required /></div>
+          <div class="field"><label for="sContacto">Contacto <span class="opt">(opcional)</span></label><input id="sContacto" maxlength="60" autocomplete="tel" placeholder="Telemóvel ou e-mail" /></div>
+          <div class="field"><label for="sPagamento">Forma de pagamento</label><select id="sPagamento"></select></div>
+          <div class="form__btns">
+            <button type="submit" class="btn btn--solid" value="whatsapp">Enviar por WhatsApp</button>
+            <button type="submit" class="btn btn--ghost" value="email">Enviar por e-mail</button>
+          </div>
+          <p class="form__msg" id="socioMsg" role="status" hidden></p>
+          <p class="cart__note form__note">Os teus dados só são usados pela direção para gerir a tua inscrição de sócio.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer data-site-footer></footer>
+<script src="js/config.js?v=11" defer></script>
+<script src="js/site.js?v=11" defer></script>
+<script src="js/pages.js?v=11" defer></script>
+</body>
+</html>

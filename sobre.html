@@ -3,26 +3,26 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sobre nós — ADC Sanguedo</title>
+<title>Sobre nós | ADC Sanguedo</title>
 <meta name="description" content="A história, a missão e os valores da Associação Desportiva e Cultural de Sanguedo." />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preload" href="fonts/oswald-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="css/style.css?v=11" />
 </head>
 <body data-page="sobre">
 <header data-site-nav></header>
+<noscript><nav class="nav-nojs" aria-label="Principal"><a href="index.html">Início</a><a href="sobre.html">Sobre nós</a><a href="estrutura.html">Estrutura</a><a href="socios.html">Sócios</a><a href="loja.html">Loja</a><a href="alugueres.html">Alugueres</a><a href="contactos.html">Contactos</a></nav></noscript>
 <main>
-  <header class="pagehead">
+  <header class="pagehead on-dark">
     <div class="bar stripes"></div>
     <div class="wrap"><h1>Sobre nós</h1><p>Quem somos, de onde vimos e o que nos move.</p></div>
   </header>
   <section class="section">
     <div class="wrap prose">
-      <p class="lead">A Associação Desportiva e Cultural de Sanguedo nasceu da vontade de dar à terra uma casa onde o desporto e a cultura crescem lado a lado.</p>
-      <p>Ao longo dos anos, o clube foi-se construindo com o trabalho de dirigentes, atletas, treinadores e, acima de tudo, dos seus associados. As cores — preto e branco às listas — passaram de geração em geração como um símbolo de pertença.</p>
+      <p class="lead">A Associação Desportiva e Cultural de Sanguedo foi fundada a <span data-clube="dataFundacaoExtenso">2 de maio de 1975</span>, da vontade de dar à terra uma casa onde o desporto e a cultura crescem lado a lado.</p>
+      <p>Ao longo dos anos, o clube foi-se construindo com o trabalho de dirigentes, atletas, treinadores e, acima de tudo, dos seus associados. As cores, preto e branco às listas, passaram de geração em geração como um símbolo de pertença.</p>
       <h3>A nossa missão</h3>
       <p>Representar Sanguedo com orgulho, formar os mais novos dentro e fora do campo, e ser um ponto de encontro para a comunidade. Competimos no futebol distrital com ambição, mas medimo-nos também pela forma como fazemos tudo o resto.</p>
       <h3>Os nossos valores</h3>
@@ -31,13 +31,17 @@
         <li><b>Formação</b><span>Acreditamos no crescimento dos jovens, no desporto e como pessoas.</span></li>
         <li><b>Excelência</b><span>Distritais na competição, exigentes em tudo o que fazemos.</span></li>
       </ul>
-      <p style="color:var(--muted);font-size:16px;margin-top:24px"><em>Texto inicial — edita livremente com a verdadeira história, datas e conquistas do clube.</em></p>
+      <h3>Direção</h3>
+      <ul class="values">
+        <li><b>Presidente</b><span data-clube="presidente">Artur Príncipe</span></li>
+      </ul>
+      <!-- Texto inicial: edita livremente com a verdadeira história, datas e conquistas do clube. -->
     </div>
   </section>
 </main>
 <footer data-site-footer></footer>
-<script src="js/config.js" defer></script>
-<script src="js/site.js" defer></script>
-<script src="js/pages.js" defer></script>
+<script src="js/config.js?v=11" defer></script>
+<script src="js/site.js?v=11" defer></script>
+<script src="js/pages.js?v=11" defer></script>
 </body>
 </html>

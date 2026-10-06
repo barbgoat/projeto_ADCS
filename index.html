@@ -4,18 +4,18 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Associação Desportiva e Cultural de Sanguedo</title>
-<meta name="description" content="Site oficial da ADC Sanguedo — história, patrocínios, redes sociais e contactos." />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
+<meta name="description" content="Site oficial da ADC Sanguedo, fundada em 1975. História, patrocínios, redes sociais e contactos." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preload" href="fonts/oswald-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="css/style.css?v=11" />
 </head>
 <body data-page="index">
 <header data-site-nav></header>
+<noscript><nav class="nav-nojs" aria-label="Principal"><a href="index.html">Início</a><a href="sobre.html">Sobre nós</a><a href="estrutura.html">Estrutura</a><a href="socios.html">Sócios</a><a href="loja.html">Loja</a><a href="alugueres.html">Alugueres</a><a href="contactos.html">Contactos</a></nav></noscript>
 <main>
-  <section class="hero" id="inicio">
+  <section class="hero on-dark" id="inicio">
     <div class="hero__grid">
       <div class="hero__crest stripes"><span id="heroCrest"></span></div>
       <div class="hero__body">
@@ -30,21 +30,33 @@
     </div>
   </section>
 
+  <section class="proximo on-dark" id="proximoJogo" hidden>
+    <div class="bar stripes"></div>
+    <div class="wrap proximo__in">
+      <div>
+        <p class="proximo__tag">Próximo jogo</p>
+        <p class="proximo__jogo" id="pjJogo"></p>
+        <p class="proximo__info" id="pjInfo"></p>
+      </div>
+      <a class="btn btn--ghost" href="estrutura.html#seniores">Ver calendário</a>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap home-hist">
       <div>
         <p class="eyebrow">O nosso clube</p>
         <h2 class="section-title">Preto e branco, de geração em geração</h2>
-        <p class="lead" style="margin-top:18px">Em Sanguedo, as listas pretas e brancas não são só a camisola — são um sinal de pertença. A Associação Desportiva e Cultural de Sanguedo vive do desporto e da cultura, feita pela terra e para a terra.</p>
+        <p class="lead lead--gap">Em Sanguedo, as listas pretas e brancas não são só a camisola, são um sinal de pertença. Desde <span data-clube="anoFundacao">1975</span> que a Associação Desportiva e Cultural de Sanguedo vive do desporto e da cultura, feita pela terra e para a terra.</p>
         <a href="sobre.html" class="btn btn--ghost more">Ler a nossa história</a>
       </div>
       <aside>
-        <div class="statcard"><div class="n" id="statAno">19<small>XX</small></div><div class="k">Ano de fundação</div></div>
+        <div class="statcard"><div class="n" id="statAno">1975</div><div class="k">Fundado a <span data-clube="dataFundacaoExtenso">2 de maio de 1975</span></div></div>
       </aside>
     </div>
   </section>
 
-  <section class="section section--alt">
+  <section class="section section--dark on-dark">
     <div class="wrap">
       <p class="eyebrow">Quem nos apoia</p>
       <h2 class="section-title">Patrocínios</h2>
@@ -59,10 +71,21 @@
       <div class="social-grid" id="redes"></div>
     </div>
   </section>
+
+  <section class="cta-socios stripes on-dark">
+    <div class="wrap cta-socios__in">
+      <div>
+        <p class="eyebrow">Sócios</p>
+        <h2 class="section-title">Faz parte do clube</h2>
+        <p class="cta-socios__txt">Renova a tua quota ou torna-te sócio em poucos minutos.</p>
+      </div>
+      <a class="btn btn--solid" href="socios.html">Quero ser sócio</a>
+    </div>
+  </section>
 </main>
 <footer data-site-footer></footer>
-<script src="js/config.js" defer></script>
-<script src="js/site.js" defer></script>
-<script src="js/pages.js" defer></script>
+<script src="js/config.js?v=11" defer></script>
+<script src="js/site.js?v=11" defer></script>
+<script src="js/pages.js?v=11" defer></script>
 </body>
 </html>

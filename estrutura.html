@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Estrutura do clube — ADC Sanguedo</title>
+<title>Estrutura do clube | ADC Sanguedo</title>
 <meta name="description" content="A estrutura da ADC Sanguedo: formação, séniores e veteranos." />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preload" href="fonts/oswald-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="css/style.css?v=11" />
 </head>
 <body data-page="estrutura">
 <header data-site-nav></header>
+<noscript><nav class="nav-nojs" aria-label="Principal"><a href="index.html">Início</a><a href="sobre.html">Sobre nós</a><a href="estrutura.html">Estrutura</a><a href="socios.html">Sócios</a><a href="loja.html">Loja</a><a href="alugueres.html">Alugueres</a><a href="contactos.html">Contactos</a></nav></noscript>
 <main>
-  <header class="pagehead">
+  <header class="pagehead on-dark">
     <div class="bar stripes"></div>
     <div class="wrap">
       <h1>Estrutura do clube</h1>
-      <p>Do primeiro pontapé aos veteranos — o clube em três frentes.</p>
+      <p>Do primeiro pontapé aos veteranos, o clube em três frentes.</p>
       <nav class="partnav">
         <a href="#formacao">Formação</a><a href="#seniores">Séniores</a><a href="#veteranos">Veteranos</a>
       </nav>
@@ -29,33 +29,34 @@
   <section class="section">
     <div class="wrap">
       <div class="part" id="formacao">
-        <div class="part__num">01 — Formação</div>
+        <div class="part__num">01 · Formação</div>
         <h2>Formação</h2>
-        <p class="lead" id="fInto">A base do clube. Formamos jovens no desporto e como pessoas, do primeiro pontapé até à entrada nos séniores.</p>
+        <p class="lead" id="fIntro"></p>
         <div class="esc-grid" id="escaloes"></div>
       </div>
 
       <div class="part" id="seniores">
-        <div class="part__num">02 — Séniores</div>
+        <div class="part__num">02 · Séniores</div>
         <h2>Séniores</h2>
-        <p class="lead">A equipa principal, o rosto competitivo do Sanguedo. Compete no futebol distrital com a ambição de subir.</p>
+        <p class="lead" id="sIntro"></p>
         <div class="facto-grid" id="seniores-factos"></div>
-        <h3 style="text-transform:uppercase;margin:40px 0 6px">Próximos jogos</h3>
+        <h3 class="part__sub">Próximos jogos</h3>
         <div class="fixtures" id="seniores-jogos"></div>
+        <a class="btn btn--ghost fixtures__more" id="zerozeroLink" href="https://www.zerozero.pt/equipa/sanguedo/6472" target="_blank" rel="noopener">Calendário e resultados no zerozero</a>
       </div>
 
       <div class="part" id="veteranos">
-        <div class="part__num">03 — Veteranos</div>
+        <div class="part__num">03 · Veteranos</div>
         <h2>Veteranos</h2>
-        <p class="lead">A memória viva do clube. Antigos jogadores que continuam a vestir o preto e branco, no desporto e no convívio.</p>
+        <p class="lead" id="vIntro"></p>
         <div class="facto-grid" id="veteranos-factos"></div>
       </div>
     </div>
   </section>
 </main>
 <footer data-site-footer></footer>
-<script src="js/config.js" defer></script>
-<script src="js/site.js" defer></script>
-<script src="js/pages.js" defer></script>
+<script src="js/config.js?v=11" defer></script>
+<script src="js/site.js?v=11" defer></script>
+<script src="js/pages.js?v=11" defer></script>
 </body>
 </html>
