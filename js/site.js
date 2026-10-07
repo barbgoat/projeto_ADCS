@@ -116,7 +116,7 @@ function montarFooter(){
     </div>
     <div class="wrap footer__bar">
       <small>© ${new Date().getFullYear()} Associação Desportiva e Cultural de Sanguedo</small>
-      <small>Orgulho preto e branco</small>
+      <span class="footer__slogan">${esc(CLUBE.slogan)}</span>
     </div>`;
 }
 

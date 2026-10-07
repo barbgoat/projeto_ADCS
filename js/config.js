@@ -2,9 +2,10 @@
    ⚙️  CONFIGURAÇÃO DO CLUBE: o que mais vais editar está aqui
    ============================================================ */
 const CLUBE = {
-  dataFundacao: "1975-05-02",                 // AAAA-MM-DD
+  dataFundacao: "1975-05-25",                 // AAAA-MM-DD
   associacao: "AF Aveiro",
   presidente: "Artur Príncipe",
+  slogan: "#ForçaParaVencer",
   marcaEquipamento: "Zemig",
   divisao: "1.ª Divisão Zona Norte · AF Aveiro",
   localidade: "Sanguedo · Santa Maria da Feira",
@@ -13,12 +14,12 @@ const CLUBE = {
   email: "adcsanguedo@hotmail.com",           // <-- e-mail do clube (recebe os formulários e encomendas)
   telefone: "+351968483067",                  // <-- WhatsApp (formato internacional, sem espaços)
   morada: "Rua Professor Domingues Henriques Ferreira, nº390",
-  emblema: "",                                // <-- ex.: "img/emblema/emblema.svg" (vazio = desenho provisório)
+  emblema: "img/emblema/emblema.jpg",         // vazio ("") = desenho provisório
 };
 // Calculados a partir da data de fundação (não precisas de mexer)
 CLUBE.anoFundacao = CLUBE.dataFundacao.slice(0, 4);
 CLUBE.dataFundacaoExtenso = new Date(CLUBE.dataFundacao + "T00:00")
-  .toLocaleDateString("pt-PT", { day:"numeric", month:"long", year:"numeric" });   // "2 de maio de 1975"
+  .toLocaleDateString("pt-PT", { day:"numeric", month:"long", year:"numeric" });   // "25 de maio de 1975"
 
 /* 🔗 REDES SOCIAIS ------------------------------------------- */
 const REDES = {
@@ -31,24 +32,21 @@ const REDES = {
 /* 🤝 PATROCÍNIOS: acrescenta patrocinadores (nome + link + logo) ---
    logo: ex. "img/patrocinadores/padaria-silva.png" (vazio = mostra só o nome) */
 const PATROCINIOS = [
-  { nome:"Patrocinador Principal", url:"", logo:"" },
-  { nome:"Patrocinador Oficial",   url:"", logo:"" },
-  { nome:"Parceiro Local",         url:"", logo:"" },
-  { nome:"Parceiro Local",         url:"", logo:"" },
+  { nome:"AJ Príncipe",      url:"", logo:"img/patrocinadores/aj-principe.svg" },     // <-- url: site ou página de Facebook
+  { nome:"PM Sport",         url:"", logo:"img/patrocinadores/pm-sport.jpg" },
+  { nome:"Tintas Silaca",    url:"", logo:"img/patrocinadores/tintas-silaca.png" },
+  { nome:"Zemig Sportswear", url:"", logo:"img/patrocinadores/zemig.png" },
 ];
 
 /* 🏛️ ESTRUTURA DO CLUBE  (Formação · Séniores · Veteranos) --- */
 const ESTRUTURA = {
   formacao: {
-    intro: "A base do clube. Formamos jovens no desporto e como pessoas, do primeiro pontapé até à entrada nos séniores.",
+    intro: "A base do clube. Formamos os mais novos no desporto e como pessoas, dos Petizes aos Infantis.",
     escaloes: [
       { nome:"Petizes",  faixa:"Sub-7" },
       { nome:"Traquinas",faixa:"Sub-9" },
       { nome:"Benjamins",faixa:"Sub-11" },
       { nome:"Infantis", faixa:"Sub-13" },
-      { nome:"Iniciados",faixa:"Sub-15" },
-      { nome:"Juvenis",  faixa:"Sub-17" },
-      { nome:"Juniores", faixa:"Sub-19" },
     ],
   },
   seniores: {

@@ -19,5 +19,5 @@ caminho em `js/config.js` e o site passa a usá-lo sozinho. Enquanto o campo est
   são bloqueados pela política de segurança (CSP).
 - **Direitos:** usa só logos e fotos que o clube tem autorização para publicar.
   Fotos com menores precisam de autorização dos pais (RGPD).
-- **Emblema:** quando trocares o emblema, atualiza também o `favicon.svg` na raiz
+- **Emblema:** quando trocares o emblema, atualiza também o `favicon.png` e o `apple-touch-icon.png` na raiz
   (o ícone do separador do navegador).

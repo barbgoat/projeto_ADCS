@@ -7,9 +7,10 @@
 <meta name="description" content="A estrutura da ADC Sanguedo: formação, séniores e veteranos." />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; upgrade-insecure-requests" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="preload" href="fonts/oswald-var.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="stylesheet" href="css/style.css?v=11" />
+<link rel="stylesheet" href="css/style.css?v=24" />
 </head>
 <body data-page="estrutura">
 <header data-site-nav></header>
@@ -26,37 +27,39 @@
     </div>
   </header>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="part" id="formacao">
-        <div class="part__num">01 · Formação</div>
-        <h2>Formação</h2>
-        <p class="lead" id="fIntro"></p>
-        <div class="esc-grid" id="escaloes"></div>
-      </div>
+  <section class="section part-sec part-sec--foto part-sec--formacao on-dark" id="formacao" aria-label="Formação">
+    <div class="wrap part">
+      <div class="part__num">01 · Formação</div>
+      <h2>Formação</h2>
+      <p class="lead" id="fIntro"></p>
+      <div class="esc-grid" id="escaloes"></div>
+    </div>
+  </section>
 
-      <div class="part" id="seniores">
-        <div class="part__num">02 · Séniores</div>
-        <h2>Séniores</h2>
-        <p class="lead" id="sIntro"></p>
-        <div class="facto-grid" id="seniores-factos"></div>
-        <h3 class="part__sub">Próximos jogos</h3>
-        <div class="fixtures" id="seniores-jogos"></div>
-        <a class="btn btn--ghost fixtures__more" id="zerozeroLink" href="https://www.zerozero.pt/equipa/sanguedo/6472" target="_blank" rel="noopener">Calendário e resultados no zerozero</a>
-      </div>
+  <section class="section part-sec part-sec--foto part-sec--seniores on-dark" id="seniores" aria-label="Séniores">
+    <div class="wrap part">
+      <div class="part__num">02 · Séniores</div>
+      <h2>Séniores</h2>
+      <p class="lead" id="sIntro"></p>
+      <div class="facto-grid" id="seniores-factos"></div>
+      <h3 class="part__sub">Próximos jogos</h3>
+      <div class="fixtures" id="seniores-jogos"></div>
+      <a class="btn btn--ghost fixtures__more" id="zerozeroLink" href="https://www.zerozero.pt/equipa/sanguedo/6472" target="_blank" rel="noopener">Calendário e resultados no zerozero</a>
+    </div>
+  </section>
 
-      <div class="part" id="veteranos">
-        <div class="part__num">03 · Veteranos</div>
-        <h2>Veteranos</h2>
-        <p class="lead" id="vIntro"></p>
-        <div class="facto-grid" id="veteranos-factos"></div>
-      </div>
+  <section class="section part-sec" id="veteranos">
+    <div class="wrap part">
+      <div class="part__num">03 · Veteranos</div>
+      <h2>Veteranos</h2>
+      <p class="lead" id="vIntro"></p>
+      <div class="facto-grid" id="veteranos-factos"></div>
     </div>
   </section>
 </main>
 <footer data-site-footer></footer>
-<script src="js/config.js?v=11" defer></script>
-<script src="js/site.js?v=11" defer></script>
-<script src="js/pages.js?v=11" defer></script>
+<script src="js/config.js?v=24" defer></script>
+<script src="js/site.js?v=24" defer></script>
+<script src="js/pages.js?v=24" defer></script>
 </body>
 </html>

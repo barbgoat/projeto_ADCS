@@ -59,9 +59,11 @@ if ($("#patrocinios")) {
     const inner = p.logo
       ? `<img class="spon__logo" src="${esc(p.logo)}" alt="${esc(p.nome)}" loading="lazy" />`
       : `<span class="spon__name">${esc(p.nome)}</span>`;
+    // Com logo: cartão branco. Sem logo nem link: cartão tracejado (lugar livre)
+    const cls = "spon" + (p.logo ? " spon--logo" : "") + (!p.logo && !p.url ? " spon--empty" : "");
     return p.url
-      ? `<a class="spon" href="${esc(p.url)}" target="_blank" rel="noopener">${inner}</a>`
-      : `<div class="spon spon--empty">${inner}</div>`;
+      ? `<a class="${cls}" href="${esc(p.url)}" target="_blank" rel="noopener">${inner}</a>`
+      : `<div class="${cls}">${inner}</div>`;
   }).join("") + `<a class="spon spon--cta stripes" href="contactos.html"><span class="spon__name">Quer ser patrocinador?</span></a>`;
 }
 if ($("#redes")) {
